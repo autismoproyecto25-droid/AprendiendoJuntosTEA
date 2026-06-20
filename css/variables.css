@@ -12,3 +12,14 @@
 
     --transition:.3s ease;
 }
+.dark-mode{
+
+--background:#0f172a;
+
+--white:#1e293b;
+
+--text:#f8fafc;
+
+--dark:#ffffff;
+
+}
