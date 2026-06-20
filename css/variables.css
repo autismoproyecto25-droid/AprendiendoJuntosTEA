@@ -1,14 +1,28 @@
 :root{
+
+    /* Colores principales */
     --primary:#219EBC;
     --secondary:#8ECAE6;
     --accent:#90BE6D;
+
+    /* Texto */
     --dark:#126782;
-    --background:#F8FCFF;
-    --white:#FFFFFF;
     --text:#444444;
 
-    --radius:20px;
-    --shadow:0 5px 20px rgba(0,0,0,.1);
+    /* Fondos */
+    --background:#F8FCFF;
+    --white:#FFFFFF;
+    --light:#F6FBFF;
 
+    /* Sombras */
+    --shadow:0 5px 20px rgba(0,0,0,.1);
+    --shadow-hover:0 15px 35px rgba(0,0,0,.15);
+
+    /* Bordes */
+    --radius:20px;
+    --radius-large:30px;
+
+    /* Animaciones */
     --transition:.3s ease;
+
 }
