@@ -275,3 +275,66 @@ body{
     line-height:1.8;
 
 }
+.activities{
+
+    padding:120px 8%;
+
+    background:#F3FBFE;
+
+}
+
+.activities-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:35px;
+
+}
+
+.activity-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.activity-card:hover{
+
+    transform:translateY(-15px);
+
+}
+
+.activity-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+}
+
+.activity-card h3{
+
+    padding:25px 30px 10px;
+
+    color:var(--dark);
+
+}
+
+.activity-card p{
+
+    padding:0 30px 30px;
+
+    line-height:1.8;
+
+}
