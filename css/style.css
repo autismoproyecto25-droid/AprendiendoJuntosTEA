@@ -32,7 +32,7 @@ select {
     font: inherit;
 }
 
-/* Encabezado y navegacion: se mantiene fijo para mejorar la maniobrabilidad. */
+/* Encabezado y navegación: se mantiene fijo para mejorar la maniobrabilidad. */
 .site-header {
     background: rgba(255, 255, 255, 0.94);
     border-bottom: 1px solid var(--line);
@@ -444,7 +444,7 @@ select {
     resize: vertical;
 }
 
-/* CTA y pie de pagina: cierre con accion clara y navegacion secundaria. */
+/* CTA y pie de pagina: cierre con accion clara y navegación secundaria. */
 .cta {
     background: var(--primary-dark);
     color: white;
