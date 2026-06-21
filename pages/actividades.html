@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades | Aprendiendo Juntos TEA</title>
+    <meta name="description" content="Actividades en casa para apoyar motricidad, lectura, emociones, musica, colores y juego sensorial en ninos con TEA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logo/favicon.ico">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Encabezado compartido: mantiene consistencia entre paginas. -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navegacion principal">
+            <a class="logo" href="../index.html"><span class="logo-mark">AJ</span><span>Aprendiendo Juntos TEA</span></a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tea.html">Que es TEA</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a class="active" href="actividades.html">Actividades</a></li>
+                <li><a href="padres.html">Para familias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero interno: explica el enfoque de las actividades. -->
+        <section class="page-hero">
+            <span class="eyebrow">Practica diaria</span>
+            <h1>Actividades faciles para realizar en casa</h1>
+            <p>Propuestas flexibles para estimular habilidades sin convertir el aprendizaje en presion.</p>
+        </section>
+
+        <!-- Filtros de actividades: ayudan a encontrar ejercicios por objetivo. -->
+        <section class="section-wrap">
+            <div class="filter-bar" data-filter-group=".activity-card">
+                <button class="filter-button active" type="button" data-filter="all">Todas</button>
+                <button class="filter-button" type="button" data-filter="sensorial">Sensorial</button>
+                <button class="filter-button" type="button" data-filter="lenguaje">Lenguaje</button>
+                <button class="filter-button" type="button" data-filter="motricidad">Motricidad</button>
+            </div>
+            <div class="activities-grid">
+                <article class="activity-card hidden" data-category="sensorial">
+                    <img src="../images/activities/Sensorial.jpg" alt="Actividad sensorial con materiales de distintas texturas">
+                    <div><h3>Bandeja sensorial</h3><p>Usa arroz, telas o pompones para explorar texturas durante 10 minutos.</p></div>
+                </article>
+                <article class="activity-card hidden" data-category="lenguaje">
+                    <img src="../images/activities/Lectura.jpg" alt="Lectura compartida">
+                    <div><h3>Lectura con elecciones</h3><p>Ofrece dos opciones de personajes o paginas para practicar decision y atencion.</p></div>
+                </article>
+                <article class="activity-card hidden" data-category="lenguaje">
+                    <img src="../images/activities/Emociones.jpg" alt="Tarjetas de emociones">
+                    <div><h3>Caras y emociones</h3><p>Relaciona tarjetas con situaciones: alegria, enojo, miedo, calma y cansancio.</p></div>
+                </article>
+                <article class="activity-card hidden" data-category="motricidad">
+                    <img src="../images/activities/Motricidad.jpg" alt="Actividad de motricidad fina">
+                    <div><h3>Pinzas y colores</h3><p>Traslada objetos pequenos con pinzas para fortalecer precision manual.</p></div>
+                </article>
+                <article class="activity-card hidden" data-category="sensorial">
+                    <img src="../images/activities/Musica.jpg" alt="Musica y movimiento">
+                    <div><h3>Musica y pausa</h3><p>Baila cuando suena la musica y practica detenerse cuando hay silencio.</p></div>
+                </article>
+                <article class="activity-card hidden" data-category="motricidad">
+                    <img src="../images/activities/Colores.jpg" alt="Clasificacion por colores">
+                    <div><h3>Clasificar por colores</h3><p>Ordena bloques, tapas o tarjetas para practicar atencion y categorizacion.</p></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Recomendaciones: evita sobrecargar a la familia y mejora la experiencia. -->
+        <section class="split-section section-band soft">
+            <div class="split-text hidden">
+                <h2>Como adaptar una actividad</h2>
+                <p>Empieza con pocos materiales, instrucciones breves y un tiempo definido. Si aparece cansancio, baja la dificultad o termina con una accion que ya domine.</p>
+            </div>
+            <div class="info-panel hidden">
+                <h3>Antes de empezar</h3>
+                <ul class="check-list">
+                    <li>Prepara el espacio con pocos distractores.</li>
+                    <li>Anticipa que van a hacer y cuando termina.</li>
+                    <li>Ofrece pausas sensoriales si las necesita.</li>
+                    <li>Reconoce el esfuerzo, no solo el resultado.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de pagina: cierre comun de la web. -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div><h3>Aprendiendo Juntos TEA</h3><p>Actividades y recursos para acompanar desde casa.</p></div>
+            <div><h3>Navegacion</h3><a href="../index.html">Inicio</a><a href="recursos.html">Recursos</a><a href="padres.html">Para familias</a></div>
+            <div><h3>Contacto</h3><p>WhatsApp: +505 5709-1162</p><p>Nicaragua</p></div>
+        </div>
+        <p class="copyright">2026 Aprendiendo Juntos TEA. Todos los derechos reservados.</p>
+    </footer>
+
+    <a class="whatsapp" href="https://wa.me/50557091162" aria-label="Escribir por WhatsApp">WA</a>
+    <button id="topBtn" type="button" aria-label="Volver arriba">Arriba</button>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Aprendiendo Juntos TEA</title>
+    <meta name="description" content="Contacto de Aprendiendo Juntos TEA para consultas, sugerencias y orientacion sobre recursos educativos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logo/favicon.ico">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Encabezado compartido: acceso rapido a todas las secciones. -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navegacion principal">
+            <a class="logo" href="../index.html"><span class="logo-mark">AJ</span><span>Aprendiendo Juntos TEA</span></a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tea.html">Que es TEA</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="padres.html">Para familias</a></li>
+                <li><a class="active" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero interno: invita al contacto de forma cercana. -->
+        <section class="page-hero">
+            <span class="eyebrow">Estamos cerca</span>
+            <h1>Contacto</h1>
+            <p>Escribenos si tienes preguntas, sugerencias o deseas compartir una necesidad de recursos.</p>
+        </section>
+
+        <!-- Datos de contacto: ofrece alternativas claras antes del formulario. -->
+        <section class="section-wrap">
+            <div class="contact-grid">
+                <article class="contact-card hidden"><span class="card-icon">WA</span><h3>WhatsApp</h3><p>+505 5709-1162</p></article>
+                <article class="contact-card hidden"><span class="card-icon">CO</span><h3>Correo</h3><p>contacto@aprendiendojuntostea.com</p></article>
+                <article class="contact-card hidden"><span class="card-icon">NI</span><h3>Ubicacion</h3><p>Nicaragua</p></article>
+            </div>
+        </section>
+
+        <!-- Formulario: envia mensajes mediante FormSubmit sin backend propio. -->
+        <section class="section-wrap soft">
+            <div class="section-title">
+                <span class="eyebrow">Mensaje directo</span>
+                <h2>Envianos tu consulta</h2>
+            </div>
+            <form class="contact-form" action="https://formsubmit.co/autismoproyecto25@gmail.com" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre completo" required>
+                <input type="email" name="correo" placeholder="Correo electronico" required>
+                <input type="text" name="asunto" placeholder="Asunto">
+                <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde Aprendiendo Juntos TEA">
+                <input type="hidden" name="_captcha" value="false">
+                <button class="btn-primary" type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de pagina: cierre institucional de la web. -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div><h3>Aprendiendo Juntos TEA</h3><p>Recursos educativos para acompanar con respeto.</p></div>
+            <div><h3>Navegacion</h3><a href="../index.html">Inicio</a><a href="recursos.html">Recursos</a><a href="actividades.html">Actividades</a></div>
+            <div><h3>Contacto</h3><p>WhatsApp: +505 5709-1162</p><p>Correo: contacto@aprendiendojuntostea.com</p></div>
+        </div>
+        <p class="copyright">2026 Aprendiendo Juntos TEA. Todos los derechos reservados.</p>
+    </footer>
+
+    <a class="whatsapp" href="https://wa.me/50557091162" aria-label="Escribir por WhatsApp">WA</a>
+    <button id="topBtn" type="button" aria-label="Volver arriba">Arriba</button>
+    <script src="../js/main.js"></script>
+</body>
+</html>

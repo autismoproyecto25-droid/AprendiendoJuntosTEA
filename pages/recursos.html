@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos | Aprendiendo Juntos TEA</title>
+    <meta name="description" content="Recursos educativos para comunicacion, rutinas visuales, emociones, autonomia y habilidades sociales en TEA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logo/favicon.ico">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Encabezado compartido: facilita moverse entre recursos y actividades. -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navegacion principal">
+            <a class="logo" href="../index.html"><span class="logo-mark">AJ</span><span>Aprendiendo Juntos TEA</span></a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tea.html">Que es TEA</a></li>
+                <li><a class="active" href="recursos.html">Recursos</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="padres.html">Para familias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero interno: presenta el catalogo de recursos. -->
+        <section class="page-hero">
+            <span class="eyebrow">Biblioteca de apoyo</span>
+            <h1>Recursos educativos para TEA</h1>
+            <p>Materiales organizados por objetivo para que familias y docentes puedan elegir rapidamente que trabajar.</p>
+        </section>
+
+        <!-- Filtros: permiten mostrar recursos segun la necesidad del momento. -->
+        <section class="section-wrap">
+            <div class="filter-bar" data-filter-group=".resource-card">
+                <button class="filter-button active" type="button" data-filter="all">Todos</button>
+                <button class="filter-button" type="button" data-filter="comunicacion">Comunicacion</button>
+                <button class="filter-button" type="button" data-filter="rutinas">Rutinas</button>
+                <button class="filter-button" type="button" data-filter="emociones">Emociones</button>
+            </div>
+            <div class="resources-grid">
+                <article class="resource-card hidden" data-category="comunicacion">
+                    <span class="card-icon">PI</span>
+                    <h3>Pictogramas basicos</h3>
+                    <p>Tarjetas para pedir ayuda, agua, descanso, bano, comida y objetos de uso diario.</p>
+                </article>
+                <article class="resource-card hidden" data-category="rutinas">
+                    <span class="card-icon">RV</span>
+                    <h3>Rutina de manana</h3>
+                    <p>Secuencia visual para despertar, asearse, vestirse, desayunar y preparar mochila.</p>
+                </article>
+                <article class="resource-card hidden" data-category="emociones">
+                    <span class="card-icon">EM</span>
+                    <h3>Semaforo emocional</h3>
+                    <p>Guia para reconocer calma, alerta y saturacion con acciones de regulacion.</p>
+                </article>
+                <article class="resource-card hidden" data-category="comunicacion">
+                    <span class="card-icon">FR</span>
+                    <h3>Frases funcionales</h3>
+                    <p>Modelos breves para practicar peticiones, rechazo respetuoso y turnos de conversacion.</p>
+                </article>
+                <article class="resource-card hidden" data-category="rutinas">
+                    <span class="card-icon">TR</span>
+                    <h3>Tabla de transiciones</h3>
+                    <p>Apoyo para anticipar cambios entre juego, comida, escuela, descanso y salida.</p>
+                </article>
+                <article class="resource-card hidden" data-category="emociones">
+                    <span class="card-icon">CA</span>
+                    <h3>Kit de calma</h3>
+                    <p>Lista de objetos y acciones para crear un espacio de regulacion sensorial en casa.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Metodo de uso: explica como aplicar materiales sin saturar. -->
+        <section class="section-wrap soft">
+            <div class="section-title">
+                <span class="eyebrow">Como usarlos</span>
+                <h2>Aplicacion sencilla en tres pasos</h2>
+            </div>
+            <div class="steps-grid">
+                <article class="step-card hidden"><span class="card-icon">1</span><h3>Elige una meta</h3><p>Trabaja una habilidad por vez: pedir ayuda, esperar turno o terminar una rutina.</p></article>
+                <article class="step-card hidden"><span class="card-icon">2</span><h3>Usa apoyos visibles</h3><p>Coloca el material donde se necesita: mesa, bano, habitacion o mochila.</p></article>
+                <article class="step-card hidden"><span class="card-icon">3</span><h3>Repite con calma</h3><p>La practica breve y constante suele funcionar mejor que sesiones largas.</p></article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de pagina: mantiene contacto y enlaces clave. -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div><h3>Aprendiendo Juntos TEA</h3><p>Recursos educativos claros y aplicables.</p></div>
+            <div><h3>Navegacion</h3><a href="../index.html">Inicio</a><a href="actividades.html">Actividades</a><a href="contacto.html">Contacto</a></div>
+            <div><h3>Contacto</h3><p>WhatsApp: +505 5709-1162</p><p>Correo: contacto@aprendiendojuntostea.com</p></div>
+        </div>
+        <p class="copyright">2026 Aprendiendo Juntos TEA. Todos los derechos reservados.</p>
+    </footer>
+
+    <a class="whatsapp" href="https://wa.me/50557091162" aria-label="Escribir por WhatsApp">WA</a>
+    <button id="topBtn" type="button" aria-label="Volver arriba">Arriba</button>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* Adaptacion para tabletas: reduce columnas y mantiene lectura comoda. */
+@media (max-width: 980px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        display: none;
+        flex-direction: column;
+        left: 24px;
+        padding: 14px;
+        position: absolute;
+        right: 24px;
+        top: 82px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+    }
+
+    .section-band,
+    .split-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 58px;
+    }
+
+    .feature-grid,
+    .resources-grid,
+    .activities-grid,
+    .contact-grid,
+    .guide-grid,
+    .steps-grid,
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Adaptacion movil: una columna, botones fluidos y espacios mas compactos. */
+@media (max-width: 640px) {
+    .navbar {
+        min-height: 70px;
+        padding: 0 16px;
+    }
+
+    .logo span:last-child {
+        max-width: 190px;
+    }
+
+    .section-wrap,
+    .section-band,
+    .page-hero {
+        padding: 58px 16px;
+    }
+
+    .soft {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .feature-grid,
+    .resources-grid,
+    .activities-grid,
+    .contact-grid,
+    .guide-grid,
+    .steps-grid,
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons,
+    .filter-bar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .filter-button {
+        width: 100%;
+    }
+
+    .contact-form,
+    .feature-card,
+    .resource-card,
+    .contact-card,
+    .guide-card,
+    .step-card,
+    .info-panel {
+        padding: 22px;
+    }
+
+    .whatsapp {
+        bottom: 16px;
+        right: 16px;
+    }
+
+    #topBtn {
+        bottom: 76px;
+        right: 16px;
+    }
+}

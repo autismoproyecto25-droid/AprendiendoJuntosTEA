@@ -1,16 +1,22 @@
 # Aprendiendo Juntos TEA
 
-Plataforma educativa para madres, padres y cuidadores de niños con Trastorno del Espectro Autista.
+Sitio web educativo para familias, docentes y cuidadores que buscan recursos practicos sobre el Trastorno del Espectro Autista.
 
-## Tecnologías
+## Secciones
+
+- Inicio con rutas de apoyo y recursos destacados.
+- Guia: Que es TEA.
+- Biblioteca de recursos con filtros.
+- Actividades en casa con filtros por objetivo.
+- Consejos para familias y cuidadores.
+- Pagina de contacto con formulario.
+
+## Tecnologias
 
 - HTML5
-- CSS3
+- CSS3 responsive
 - JavaScript
-- Blogger XML
-- Git
-- GitHub
 
 ## Objetivo
 
-Brindar recursos, actividades y herramientas para apoyar el desarrollo y aprendizaje de niños con TEA.
+Brindar informacion clara, actividades y herramientas de facil aplicacion para apoyar el aprendizaje, la comunicacion, la autonomia y el bienestar de ninos y ninas con TEA.
