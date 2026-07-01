@@ -44,8 +44,12 @@ document.querySelectorAll("[data-filter-group]").forEach((group) => {
         button.addEventListener("click", () => {
             const filter = button.dataset.filter;
 
-            buttons.forEach((item) => item.classList.remove("active"));
+            buttons.forEach((item) => {
+                item.classList.remove("active");
+                item.setAttribute("aria-pressed", "false");
+            });
             button.classList.add("active");
+            button.setAttribute("aria-pressed", "true");
 
             cards.forEach((card) => {
                 const shouldShow = filter === "all" || card.dataset.category === filter;
@@ -60,7 +64,7 @@ const topButton = document.getElementById("topBtn");
 
 if (topButton) {
     window.addEventListener("scroll", () => {
-        topButton.style.display = window.scrollY > 480 ? "block" : "none";
+        topButton.style.display = window.scrollY > 480 ? "flex" : "none";
     });
 
     topButton.addEventListener("click", () => {

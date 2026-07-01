@@ -3,8 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA | Recursos para familias</title>
+    <title>Aprendiendo Juntos TEA | Recursos para familias</title>
     <meta name="description" content="Recursos educativos, actividades y guías practicas para acompañar a niños y niñas con Trastorno del Espectro Autista.">
+    <link rel="canonical" href="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/">
+    <meta name="theme-color" content="#f7fbfc" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#10161a" media="(prefers-color-scheme: dark)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aprendiendo Juntos TEA">
+    <meta property="og:locale" content="es_NI">
+    <meta property="og:title" content="Aprendiendo Juntos TEA | Recursos para familias">
+    <meta property="og:description" content="Recursos educativos, actividades y guías practicas para acompañar a niños y niñas con Trastorno del Espectro Autista.">
+    <meta property="og:url" content="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/">
+    <meta property="og:image" content="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/images/banners/familia-interactuando-nino.png">
+    <meta property="og:image:width" content="1402">
+    <meta property="og:image:height" content="1122">
+    <meta property="og:image:alt" content="Familia acompañando a un niño durante una actividad educativa">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aprendiendo Juntos TEA | Recursos para familias">
+    <meta name="twitter:description" content="Recursos educativos, actividades y guías practicas para acompañar a niños y niñas con Trastorno del Espectro Autista.">
+    <meta name="twitter:image" content="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/images/banners/familia-interactuando-nino.png">
+
+    <script>
+        (function () {
+            try {
+                var storedTheme = localStorage.getItem("theme");
+                if (storedTheme) {
+                    document.documentElement.setAttribute("data-theme", storedTheme);
+                }
+            } catch (error) {
+                /* localStorage no disponible: se usara la preferencia del sistema */
+            }
+        })();
+    </script>
+    <link rel="preload" as="image" href="images/banners/familia-interactuando-nino.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,48 +44,107 @@
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/#organization",
+                "name": "Aprendiendo Juntos TEA",
+                "url": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/",
+                "logo": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/images/logo/favicon.ico",
+                "email": "contacto@aprendiendojuntostea.com"
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/#website",
+                "url": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/",
+                "name": "Aprendiendo Juntos TEA",
+                "inLanguage": "es",
+                "publisher": { "@id": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/#organization" }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "¿Qué hago si una actividad no funciona?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Reduce pasos, cambia el material o prueba en otro momento. La meta es adaptar la actividad al niño o niña, no forzar el proceso."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "¿Los recursos reemplazan la terapia?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. Son apoyos educativos para casa y escuela. Ante dudas clínicas o conductuales, conviene consultar con profesionales especializados."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "¿Puedo usar estos materiales en el aula?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Si. Están pensados para familias, docentes y cuidadores que necesitan herramientas sencillas y adaptables."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <!-- Encabezado principal: mantiene la navegación visible y accesible. -->
     <header class="site-header">
         <nav class="navbar" aria-label="navegación principal">
-            <a class="logo" href="index.html" aria-label="Inicio Aprendiendo Juntos sobre Transtorno del Espectro Autista">
-                <span class="logo-mark">TEA</span>
-                <span>Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA</span>
+            <a class="logo" href="index.html" aria-label="Inicio Aprendiendo Juntos TEA, portal sobre el Trastorno del Espectro Autista">
+                <span class="logo-mark">AJ</span>
+                <span>Aprendiendo Juntos TEA</span>
             </a>
-            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a class="active" href="index.html">Inicio</a></li>
-                <li><a href="pages/tea.html">¿Qué es el Transtorno del Espectro Autista - TEA?</a></li>
-                <li><a href="pages/recursos.html">Recursos</a></li>
-                <li><a href="pages/actividades.html">Actividades</a></li>
-                <li><a href="pages/padres.html">Para familias</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links" id="primaryNav">
+                    <li><a class="active" href="index.html">Inicio</a></li>
+                    <li><a href="pages/tea.html">¿Qué es el TEA?</a></li>
+                    <li><a href="pages/recursos.html">Recursos</a></li>
+                    <li><a href="pages/actividades.html">Actividades</a></li>
+                    <li><a href="pages/padres.html">Para familias</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                </ul>
+                <button class="theme-toggle" type="button" id="themeToggle" aria-pressed="false" aria-label="Cambiar a modo oscuro">
+                    <span class="theme-toggle-icon" aria-hidden="true"></span>
+                </button>
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primaryNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Hero: presenta el propósito de la web y guía hacia las acciones principales. -->
         <section class="hero section-band">
             <div class="hero-content hidden">
                 <span class="eyebrow">Recursos claros para acompañar mejor</span>
-                <h1>Herramientas practicas para familias que acompañan el Transtorno del Espectro Autista - TEA</h1>
+                <h1>Herramientas practicas para familias que acompañan el Trastorno del Espectro Autista - TEA</h1>
                 <p>
                     Encuentra guías, actividades, rutinas visuales y consejos pensados para apoyar la comunicación,
                     la autonomía y el bienestar de niños y niñas dentro del espectro autista.
                 </p>
                 <div class="hero-buttons">
                     <a class="btn-primary" href="pages/recursos.html">Explorar recursos</a>
-                    <a class="btn-secondary" href="pages/tea.html">Conocer sobre el Transtorno del Espectro Autista</a>
+                    <a class="btn-secondary" href="pages/tea.html">Conocer sobre el Trastorno del Espectro Autista</a>
                 </div>
             </div>
             <div class="hero-image hidden">
-                <img src="images/banners/Familia interactuando con ni&ntilde;o.png" alt="Familia acompañando a un niño durante una actividad educativa">
+                <img src="images/banners/familia-interactuando-nino.png" width="1402" height="1122" alt="Familia acompañando a un niño durante una actividad educativa" fetchpriority="high" decoding="async">
             </div>
         </section>
 
@@ -66,17 +157,17 @@
             </div>
             <div class="feature-grid">
                 <a class="feature-card hidden" href="pages/recursos.html">
-                    <span class="card-icon">CO</span>
+                    <span class="card-icon" aria-hidden="true">CO</span>
                     <h3>Comunicación</h3>
                     <p>Pictogramas, apoyos visuales y estrategias para expresar necesidades.</p>
                 </a>
                 <a class="feature-card hidden" href="pages/actividades.html">
-                    <span class="card-icon">AC</span>
+                    <span class="card-icon" aria-hidden="true">AC</span>
                     <h3>Actividades en casa</h3>
                     <p>Ideas sencillas para estimular habilidades sensoriales, sociales y cognitivas.</p>
                 </a>
                 <a class="feature-card hidden" href="pages/padres.html">
-                    <span class="card-icon">FA</span>
+                    <span class="card-icon" aria-hidden="true">FA</span>
                     <h3>Guía familiar</h3>
                     <p>Orientaciones para rutinas, anticipación, crisis y acompañamiento respetuoso.</p>
                 </a>
@@ -87,9 +178,9 @@
         <section class="split-section section-band soft" aria-labelledby="tea-title">
             <div class="split-text hidden">
                 <span class="eyebrow">Comprender para acompañar</span>
-                <h2 id="tea-title">El Transtorno del Espectro Autista no define a una persona: Ayuda a entender sus necesidades</h2>
+                <h2 id="tea-title">El Trastorno del Espectro Autista no define a una persona: Ayuda a entender sus necesidades</h2>
                 <p>
-                    El Transtorno del Espectro Autista es una condición del neurodesarrollo que puede influir en la
+                    El Trastorno del Espectro Autista es una condición del neurodesarrollo que puede influir en la
                     comunicación, la interacción social, la flexibilidad y la forma de procesar estímulos. Cada persona
                     tiene fortalezas, intereses y apoyos distintos.
                 </p>
@@ -115,17 +206,17 @@
             </div>
             <div class="resources-grid">
                 <article class="resource-card hidden">
-                    <span class="card-icon">RV</span>
+                    <span class="card-icon" aria-hidden="true">RV</span>
                     <h3>Rutinas visuales</h3>
                     <p>Secuencias para anticipar actividades, reducir ansiedad y fortalecer autonomía.</p>
                 </article>
                 <article class="resource-card hidden">
-                    <span class="card-icon">EM</span>
+                    <span class="card-icon" aria-hidden="true">EM</span>
                     <h3>Emociones</h3>
                     <p>Tarjetas y dinámicas para identificar, nombrar y comunicar estados emocionales.</p>
                 </article>
                 <article class="resource-card hidden">
-                    <span class="card-icon">HS</span>
+                    <span class="card-icon" aria-hidden="true">HS</span>
                     <h3>Habilidades sociales</h3>
                     <p>Historias sociales y juegos para practicar turnos, espera y convivencia.</p>
                 </article>
@@ -141,21 +232,21 @@
             </div>
             <div class="activities-grid">
                 <article class="activity-card hidden">
-                    <img src="images/activities/Sensorial.jpg" alt="Materiales para juego sensorial">
+                    <img src="images/activities/Sensorial.jpg" width="4000" height="6000" alt="Materiales para juego sensorial" loading="lazy" decoding="async">
                     <div>
                         <h3>Juego sensorial</h3>
-                        <p>exploración con texturas, colores y materiales seguros.</p>
+                        <p>Exploración con texturas, colores y materiales seguros.</p>
                     </div>
                 </article>
                 <article class="activity-card hidden">
-                    <img src="images/activities/Emociones.jpg" alt="Tarjetas para reconocer emociones">
+                    <img src="images/activities/Emociones.jpg" width="5472" height="3648" alt="Tarjetas para reconocer emociones" loading="lazy" decoding="async">
                     <div>
                         <h3>Tarjetas de emociones</h3>
                         <p>Practica para reconocer expresiones y pedir ayuda.</p>
                     </div>
                 </article>
                 <article class="activity-card hidden">
-                    <img src="images/activities/Lectura.jpg" alt="Lectura compartida en familia">
+                    <img src="images/activities/Lectura.jpg" width="3936" height="2624" alt="Lectura compartida en familia" loading="lazy" decoding="async">
                     <div>
                         <h3>Lectura compartida</h3>
                         <p>Lecturas breves con preguntas simples y apoyo visual.</p>
@@ -214,8 +305,8 @@
                 <p>Recursos educativos para acompañar el aprendizaje, la comunicación y el bienestar.</p>
             </div>
             <div>
-                <h3>navegación</h3>
-                <a href="pages/tea.html">Que es TEA</a>
+                <h3>Navegación</h3>
+                <a href="pages/tea.html">¿Qué es el TEA?</a>
                 <a href="pages/recursos.html">Recursos</a>
                 <a href="pages/actividades.html">Actividades</a>
                 <a href="pages/contacto.html">Contacto</a>
@@ -230,8 +321,9 @@
         <p class="copyright">2026 Aprendiendo Juntos TEA. Todos los derechos reservados.</p>
     </footer>
 
-    <a class="whatsapp" href="https://wa.me/50557091162" aria-label="Escribir por WhatsApp">WA</a>
-    <button id="topBtn" type="button" aria-label="Volver arriba">Arriba</button>
+    <a class="whatsapp" href="https://wa.me/50557091162" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.1 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg></a>
+    <button id="topBtn" type="button" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg></button>
+    <script src="js/darkmode.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

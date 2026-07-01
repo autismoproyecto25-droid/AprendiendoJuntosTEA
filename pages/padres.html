@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para familias | Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA</title>
-    <meta name="description" content="Consejos para familias y cuidadores de niños con TEA: rutinas, comunicación, regulación y cuidado familiar.">
+    <title>Guía para familias | Aprendiendo Juntos TEA</title>
+    <meta name="description" content="Consejos prácticos para familias y cuidadores de niños con TEA: rutinas, comunicación, regulación emocional y cuándo buscar ayuda profesional ante una crisis.">
+    <link rel="canonical" href="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/pages/padres.html">
+    <meta name="theme-color" content="#f7fbfc" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#10161a" media="(prefers-color-scheme: dark)">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Aprendiendo Juntos TEA">
+    <meta property="og:locale" content="es_NI">
+    <meta property="og:title" content="Guía para familias | Aprendiendo Juntos TEA">
+    <meta property="og:description" content="Consejos prácticos para familias y cuidadores de niños con TEA: rutinas, comunicación, regulación emocional y cuándo buscar ayuda profesional ante una crisis.">
+    <meta property="og:url" content="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/pages/padres.html">
+    <meta property="og:image" content="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/images/banners/familia-interactuando-nino.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Guía para familias | Aprendiendo Juntos TEA">
+    <meta name="twitter:description" content="Consejos prácticos para familias: rutinas, comunicación, regulación emocional y cuándo buscar ayuda profesional.">
+    <meta name="twitter:image" content="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/images/banners/familia-interactuando-nino.png">
+
+    <script>
+        (function () {
+            try {
+                var storedTheme = localStorage.getItem("theme");
+                if (storedTheme) {
+                    document.documentElement.setAttribute("data-theme", storedTheme);
+                }
+            } catch (error) {
+                /* localStorage no disponible: se usara la preferencia del sistema */
+            }
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,25 +40,61 @@
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animation.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/" },
+                    { "@type": "ListItem", "position": 2, "name": "Para familias", "item": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/pages/padres.html" }
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "name": "Guía para familias",
+                "url": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/pages/padres.html",
+                "description": "Consejos prácticos para familias y cuidadores de niños con TEA: rutinas, comunicación, regulación emocional y cuándo buscar ayuda profesional ante una crisis.",
+                "inLanguage": "es",
+                "isPartOf": { "@id": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/#website" }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <!-- Encabezado compartido: orienta a la familia dentro del sitio. -->
     <header class="site-header">
         <nav class="navbar" aria-label="Navegación principal">
-            <a class="logo" href="../index.html"><span class="logo-mark">AJ</span><span>Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA</span></a>
-            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
-            <ul class="nav-links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tea.html">¿Qué es TEA?</a></li>
-                <li><a href="recursos.html">Recursos</a></li>
-                <li><a href="actividades.html">Actividades</a></li>
-                <li><a class="active" href="padres.html">Para familias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+            <a class="logo" href="../index.html"><span class="logo-mark">AJ</span><span>Aprendiendo Juntos TEA</span></a>
+            <div class="nav-right">
+                <ul class="nav-links" id="primaryNav">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="tea.html">¿Qué es el TEA?</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="actividades.html">Actividades</a></li>
+                    <li><a class="active" href="padres.html">Para familias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <button class="theme-toggle" type="button" id="themeToggle" aria-pressed="false" aria-label="Cambiar a modo oscuro">
+                    <span class="theme-toggle-icon" aria-hidden="true"></span>
+                </button>
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span><span></span></button>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
+        <nav class="breadcrumbs" aria-label="Ruta de navegación">
+            <ol>
+                <li><a href="../index.html">Inicio</a></li>
+                <li aria-current="page">Para familias</li>
+            </ol>
+        </nav>
+
         <!-- Hero interno: habla directamente a cuidadores y familias. -->
         <section class="page-hero">
             <span class="eyebrow">Acompañamiento familiar</span>
@@ -42,43 +106,48 @@
         <section class="section-wrap">
             <div class="guide-grid">
                 <article class="guide-card hidden">
-                    <span class="card-icon">RU</span>
+                    <span class="card-icon" aria-hidden="true">RU</span>
                     <h3>Rutinas claras</h3>
                     <p>Usa horarios visuales y anticipa cambios con tiempo para reducir incertidumbre.</p>
                 </article>
                 <article class="guide-card hidden">
-                    <span class="card-icon">CO</span>
+                    <span class="card-icon" aria-hidden="true">CO</span>
                     <h3>Comunicación funcional</h3>
-                    <p>Valida gestos, señalamientos, palabras, pictogramas o cualquier forma de expresión.</p>
+                    <p>Valida gestos, señalamientos, palabras, pictogramas o cualquier forma de expresión: toda comunicación cuenta, no solo la hablada.</p>
                 </article>
                 <article class="guide-card hidden">
-                    <span class="card-icon">PA</span>
+                    <span class="card-icon" aria-hidden="true">PA</span>
                     <h3>Pausas necesarias</h3>
                     <p>Incluye momentos de descanso antes de llegar a la saturación sensorial o emocional.</p>
                 </article>
                 <article class="guide-card hidden">
-                    <span class="card-icon">IN</span>
+                    <span class="card-icon" aria-hidden="true">IN</span>
                     <h3>Intereses como puente</h3>
                     <p>Usa sus temas favoritos para motivar lectura, turnos, conteo o juego compartido.</p>
                 </article>
                 <article class="guide-card hidden">
-                    <span class="card-icon">LI</span>
-                    <h3>Limites predecibles</h3>
+                    <span class="card-icon" aria-hidden="true">LI</span>
+                    <h3>Límites predecibles</h3>
                     <p>Explica reglas con pocas palabras y acompaña con apoyos visuales si es posible.</p>
                 </article>
                 <article class="guide-card hidden">
-                    <span class="card-icon">CU</span>
+                    <span class="card-icon" aria-hidden="true">CU</span>
                     <h3>Cuidado familiar</h3>
                     <p>También importa el descanso de quienes cuidan. Pedir apoyo no es fallar.</p>
                 </article>
             </div>
         </section>
 
-        <!-- Plan de crisis: orienta sin convertir la pagina en consejo medico. -->
+        <!-- Plan de crisis: orienta con pasos concretos y deja claro cuando se necesita ayuda profesional. -->
         <section class="split-section section-band soft">
             <div class="split-text hidden">
                 <h2>Cuando aparece una crisis o sobrecarga</h2>
-                <p>Primero reduce estímulos y asegura el entorno. Habla poco, con voz calmada, y espera a que el cuerpo vuelva a regularse antes de explicar o pedir cambios.</p>
+                <p>
+                    Lo que suele llamarse "crisis" o "meltdown" es una respuesta de sobrecarga del sistema nervioso, no
+                    una rabieta intencional. Primero reduce estímulos y asegura el entorno. Habla poco, con voz calmada,
+                    y espera a que el cuerpo vuelva a regularse antes de explicar o pedir cambios.
+                </p>
+                <p>Estos episodios suelen ser manejables en casa. La sección de al lado explica cuándo dejan de serlo.</p>
             </div>
             <div class="info-panel hidden">
                 <h3>Acciones útiles</h3>
@@ -86,7 +155,43 @@
                     <li>Bajar ruido, luz o cantidad de personas.</li>
                     <li>Ofrecer agua, respiración, objeto regulador o espacio tranquilo.</li>
                     <li>Evitar regaños durante la sobrecarga.</li>
-                    <li>Revisar después que pudo detonar la situación.</li>
+                    <li>Revisar después qué pudo detonar la situación.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Criterios de derivacion: hallazgo critico corregido, con fuente citada. -->
+        <section class="section-wrap">
+            <div class="help-notice">
+                <h3>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg>
+                    Cuándo buscar ayuda profesional
+                </h3>
+                <p>
+                    Las guías clínicas del NICE (Reino Unido) sobre manejo de conductas que desafían en TEA recomiendan
+                    apoyo profesional formal cuando el episodio pone en riesgo la seguridad física del niño, niña o de
+                    otras personas; cuando ocurre con mucha frecuencia o intensidad; o cuando limita seriamente la vida
+                    diaria, escolar o familiar. Si observas autolesión, agresión a terceros, crisis muy prolongadas o que
+                    van en aumento, consulta con el pediatra, un psicólogo especializado en TEA o el equipo de salud
+                    mental infantil. Esta guía es un apoyo educativo, no un sustituto de esa evaluación.
+                </p>
+            </div>
+        </section>
+
+        <!-- Fuentes: respalda especialmente la seccion de manejo de crisis. -->
+        <section class="section-wrap">
+            <div class="sources">
+                <h2>Fuentes científicas</h2>
+                <p>Información revisada y redactada por Aprendiendo Juntos TEA a partir de las siguientes fuentes. No sustituye la valoración de un profesional de la salud.</p>
+                <ul>
+                    <li>
+                        <a href="https://www.nice.org.uk/guidance/cg170" target="_blank" rel="noopener noreferrer">NICE — Guía clínica CG170, autismo: manejo en niños, niñas y jóvenes<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+                        <span class="source-note">Manejo de conductas que desafían y criterios para apoyo profesional formal.</span>
+                    </li>
+                    <li>
+                        <a href="https://www.aap.org/en/patient-care/autism/" target="_blank" rel="noopener noreferrer">American Academy of Pediatrics — Autism Spectrum Disorder, atención centrada en la familia<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+                        <span class="source-note">Orientación general para familias y cuidadores.</span>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -95,15 +200,16 @@
     <!-- Pie de pagina: datos de contacto para apoyo adicional. -->
     <footer class="site-footer">
         <div class="footer-container">
-            <div><h3>Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA</h3><p>Acompañar también es aprender a ajustar el entorno.</p></div>
-            <div><h3>Navegación</h3><a href="../index.html">Inicio</a><a href="tea.html">Que es TEA</a><a href="contacto.html">Contacto</a></div>
+            <div><h3>Aprendiendo Juntos TEA</h3><p>Acompañar también es aprender a ajustar el entorno.</p></div>
+            <div><h3>Navegación</h3><a href="../index.html">Inicio</a><a href="tea.html">¿Qué es el TEA?</a><a href="contacto.html">Contacto</a></div>
             <div><h3>Contacto</h3><p>WhatsApp: +505 5709-1162</p><p>Nicaragua</p></div>
         </div>
-        <p class="copyright">2026 Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA. Todos los derechos reservados.</p>
+        <p class="copyright">2026 Aprendiendo Juntos TEA. Todos los derechos reservados.</p>
     </footer>
 
-    <a class="whatsapp" href="https://wa.me/50557091162" aria-label="Escribir por WhatsApp">WA</a>
-    <button id="topBtn" type="button" aria-label="Volver arriba">Arriba</button>
+    <a class="whatsapp" href="https://wa.me/50557091162" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.1 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg></a>
+    <button id="topBtn" type="button" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg></button>
+    <script src="../js/darkmode.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>
