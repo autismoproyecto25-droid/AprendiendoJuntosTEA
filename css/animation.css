@@ -1,10 +1,22 @@
-.hidden{
-    opacity:0;
-    transform:translateY(50px);
-    transition:all .8s ease;
+/* Modulo de animaciones de entrada: unica definicion de .hidden/.show usada por js/main.js
+   (IntersectionObserver) en las 6 paginas. Antes esta logica estaba duplicada de forma distinta
+   en css/style.css y en este archivo (que no estaba enlazado); ahora vive solo aqui. */
+.hidden {
+    opacity: 0;
+    transform: translateY(28px);
 }
 
-.show{
-    opacity:1;
-    transform:translateY(0);
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hidden,
+    .show {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }

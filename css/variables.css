@@ -1,8 +1,25 @@
+/* Tokens de diseno: unica fuente de verdad para color, tipografia, espaciado, radios y movimiento.
+   --ink, --text, --muted, --background, --surface, --soft, --line, --accent-text y --header-bg
+   cambian segun el tema (claro/oscuro). El resto de tokens de marca son fijos en ambos temas
+   porque ya estan calculados para mantener contraste accesible sobre cualquier fondo. */
+
 :root {
+    color-scheme: light;
+
+    /* Marca y semantica: fijos en ambos temas */
     --primary: #1f7a8c;
     --primary-dark: #145766;
     --secondary: #bfdb38;
     --accent: #f5a524;
+    --success: #4f8f54;
+    --danger: #c0524b;
+    --whatsapp-bg: #0b8043;
+    --on-accent: #172026;
+    --surface-inverse: #10181c;
+    --text-on-inverse: #dce8eb;
+
+    /* Texto y superficies: adaptables por tema */
+    --accent-text: #145766;
     --ink: #172026;
     --text: #44505a;
     --muted: #6b7a86;
@@ -10,11 +27,91 @@
     --surface: #ffffff;
     --soft: #eaf6f8;
     --line: #dbe8ec;
-    --success: #4f8f54;
-    --danger: #c0524b;
-    --radius: 8px;
-    --shadow: 0 16px 40px rgba(23, 32, 38, 0.1);
+    --header-bg: rgba(255, 255, 255, 0.88);
+
+    /* Elevacion */
+    --shadow-sm: 0 2px 8px rgba(23, 32, 38, 0.06);
     --shadow-soft: 0 8px 24px rgba(23, 32, 38, 0.08);
-    --container: 1180px;
+    --shadow: 0 16px 40px rgba(23, 32, 38, 0.1);
+    --shadow-lg: 0 24px 56px rgba(23, 32, 38, 0.18);
+
+    /* Radios */
+    --radius-sm: 6px;
+    --radius: 8px;
+    --radius-lg: 18px;
+    --radius-full: 999px;
+
+    /* Espaciado (escala de 4px) */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+
+    /* Tipografia */
+    --font-body: "Poppins", "Segoe UI", Arial, sans-serif;
+    --fs-xs: 0.78rem;
+    --fs-sm: 0.9rem;
+    --fs-base: 1rem;
+    --fs-md: 1.05rem;
+    --fs-section: clamp(2rem, 4vw, 3.25rem);
+    --fs-hero: clamp(2.35rem, 5vw, 4.5rem);
+    --lh-tight: 1.12;
+    --lh-normal: 1.65;
+
+    /* Movimiento */
+    --transition-fast: 0.15s ease;
     --transition: 0.25s ease;
+    --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* Layout */
+    --container: 1180px;
+    --header-height: 76px;
+
+    /* Capas */
+    --z-header: 1000;
+    --z-fab: 900;
+    --z-skip-link: 2000;
+}
+
+/* Modo oscuro automatico: sigue la preferencia del sistema salvo que haya una eleccion manual guardada. */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --accent-text: #7fd6e6;
+        --ink: #eef4f5;
+        --text: #c3d0d4;
+        --muted: #8ea0a7;
+        --background: #10161a;
+        --surface: #182226;
+        --soft: #16262c;
+        --line: #263941;
+        --header-bg: rgba(16, 22, 26, 0.82);
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+        --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.4);
+        --shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+        --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* Modo oscuro manual: activado por js/darkmode.js mediante [data-theme="dark"] en <html>. */
+[data-theme="dark"] {
+    color-scheme: dark;
+    --accent-text: #7fd6e6;
+    --ink: #eef4f5;
+    --text: #c3d0d4;
+    --muted: #8ea0a7;
+    --background: #10161a;
+    --surface: #182226;
+    --soft: #16262c;
+    --line: #263941;
+    --header-bg: rgba(16, 22, 26, 0.82);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.4);
+    --shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.6);
 }

@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap:
-https://autismoproyecto25-droid.io/AprendiendoJuntosTEA/sitemap.xml
+Sitemap: https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/sitemap.xml

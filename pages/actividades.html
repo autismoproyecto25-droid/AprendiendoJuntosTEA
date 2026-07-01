@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividades | Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA</title>
-    <meta name="description" content="Actividades en casa para apoyar motricidad, lectura, emociones, música, colores y juego sensorial en ninos con TEA.">
+    <title>Actividades para casa | Aprendiendo Juntos TEA</title>
+    <meta name="description" content="Actividades en casa para apoyar motricidad, lectura, emociones, música, colores y juego sensorial en niños con TEA, con ideas para adaptarlas.">
+    <link rel="canonical" href="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/pages/actividades.html">
+    <meta name="theme-color" content="#f7fbfc" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#10161a" media="(prefers-color-scheme: dark)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aprendiendo Juntos TEA">
+    <meta property="og:locale" content="es_NI">
+    <meta property="og:title" content="Actividades para casa | Aprendiendo Juntos TEA">
+    <meta property="og:description" content="Actividades en casa para apoyar motricidad, lectura, emociones, música, colores y juego sensorial en niños con TEA.">
+    <meta property="og:url" content="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/pages/actividades.html">
+    <meta property="og:image" content="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/images/banners/familia-interactuando-nino.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Actividades para casa | Aprendiendo Juntos TEA">
+    <meta name="twitter:description" content="Actividades en casa para apoyar motricidad, lectura, emociones y juego sensorial en niños con TEA.">
+    <meta name="twitter:image" content="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/images/banners/familia-interactuando-nino.png">
+
+    <script>
+        (function () {
+            try {
+                var storedTheme = localStorage.getItem("theme");
+                if (storedTheme) {
+                    document.documentElement.setAttribute("data-theme", storedTheme);
+                }
+            } catch (error) {
+                /* localStorage no disponible: se usara la preferencia del sistema */
+            }
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,63 +40,99 @@
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animation.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/" },
+                    { "@type": "ListItem", "position": 2, "name": "Actividades", "item": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/pages/actividades.html" }
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "name": "Actividades para casa",
+                "url": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/pages/actividades.html",
+                "description": "Actividades en casa para apoyar motricidad, lectura, emociones, música, colores y juego sensorial en niños con TEA.",
+                "inLanguage": "es",
+                "isPartOf": { "@id": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/#website" }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <!-- Encabezado compartido: mantiene consistencia entre paginas. -->
     <header class="site-header">
-        <nav class="navbar" aria-label="Navegacion principal">
-            <a class="logo" href="../index.html"><span class="logo-mark">AJ</span><span>Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA</span></a>
-            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
-            <ul class="nav-links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tea.html">¿Qué es TEA?</a></li>
-                <li><a href="recursos.html">Recursos</a></li>
-                <li><a class="active" href="actividades.html">Actividades</a></li>
-                <li><a href="padres.html">Para familias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar" aria-label="Navegación principal">
+            <a class="logo" href="../index.html"><span class="logo-mark">AJ</span><span>Aprendiendo Juntos TEA</span></a>
+            <div class="nav-right">
+                <ul class="nav-links" id="primaryNav">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="tea.html">¿Qué es el TEA?</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a class="active" href="actividades.html">Actividades</a></li>
+                    <li><a href="padres.html">Para familias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <button class="theme-toggle" type="button" id="themeToggle" aria-pressed="false" aria-label="Cambiar a modo oscuro">
+                    <span class="theme-toggle-icon" aria-hidden="true"></span>
+                </button>
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span><span></span></button>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
+        <nav class="breadcrumbs" aria-label="Ruta de navegación">
+            <ol>
+                <li><a href="../index.html">Inicio</a></li>
+                <li aria-current="page">Actividades</li>
+            </ol>
+        </nav>
+
         <!-- Hero interno: explica el enfoque de las actividades. -->
         <section class="page-hero">
-            <span class="eyebrow">Practica diaria</span>
+            <span class="eyebrow">Práctica diaria</span>
             <h1>Actividades fáciles para realizar en casa</h1>
-            <p>Propuestas flexibles para estimular habilidades sin convertir el aprendizaje en presión.</p>
+            <p>Propuestas flexibles para estimular habilidades sin convertir el aprendizaje en presión. Son juego y práctica cotidiana, no una terapia clínica.</p>
         </section>
 
         <!-- Filtros de actividades: ayudan a encontrar ejercicios por objetivo. -->
         <section class="section-wrap">
             <div class="filter-bar" data-filter-group=".activity-card">
-                <button class="filter-button active" type="button" data-filter="all">Todas</button>
-                <button class="filter-button" type="button" data-filter="sensorial">Sensorial</button>
-                <button class="filter-button" type="button" data-filter="lenguaje">Lenguaje</button>
-                <button class="filter-button" type="button" data-filter="motricidad">Motricidad</button>
+                <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">Todas</button>
+                <button class="filter-button" type="button" data-filter="sensorial" aria-pressed="false">Sensorial</button>
+                <button class="filter-button" type="button" data-filter="lenguaje" aria-pressed="false">Lenguaje</button>
+                <button class="filter-button" type="button" data-filter="motricidad" aria-pressed="false">Motricidad</button>
             </div>
             <div class="activities-grid">
                 <article class="activity-card hidden" data-category="sensorial">
-                    <img src="../images/activities/Sensorial.jpg" alt="Actividad sensorial con materiales de distintas texturas">
+                    <img src="../images/activities/Sensorial.jpg" width="4000" height="6000" alt="Actividad sensorial con materiales de distintas texturas" loading="lazy" decoding="async">
                     <div><h3>Bandeja sensorial</h3><p>Usa arroz, telas o pompones para explorar texturas durante 10 minutos.</p></div>
                 </article>
                 <article class="activity-card hidden" data-category="lenguaje">
-                    <img src="../images/activities/Lectura.jpg" alt="Lectura compartida">
-                    <div><h3>Lectura con elecciones</h3><p>Ofrece dos opciones de personajes o paginas para practicar decision y atencion.</p></div>
+                    <img src="../images/activities/Lectura.jpg" width="3936" height="2624" alt="Lectura compartida" loading="lazy" decoding="async">
+                    <div><h3>Lectura con elecciones</h3><p>Ofrece dos opciones de personajes o páginas para practicar decisión y atención.</p></div>
                 </article>
                 <article class="activity-card hidden" data-category="lenguaje">
-                    <img src="../images/activities/Emociones.jpg" alt="Tarjetas de emociones">
+                    <img src="../images/activities/Emociones.jpg" width="5472" height="3648" alt="Tarjetas de emociones" loading="lazy" decoding="async">
                     <div><h3>Caras y emociones</h3><p>Relaciona tarjetas con situaciones: alegría, enojo, miedo, calma y cansancio.</p></div>
                 </article>
                 <article class="activity-card hidden" data-category="motricidad">
-                    <img src="../images/activities/Motricidad.jpg" alt="Actividad de motricidad fina">
-                    <div><h3>Pinzas y colores</h3><p>Traslada objetos pequeños con pinzas para fortalecer precision manual.</p></div>
+                    <img src="../images/activities/Motricidad.jpg" width="6000" height="4000" alt="Actividad de motricidad fina" loading="lazy" decoding="async">
+                    <div><h3>Pinzas y colores</h3><p>Traslada objetos pequeños con pinzas para fortalecer precisión manual.</p></div>
                 </article>
                 <article class="activity-card hidden" data-category="sensorial">
-                    <img src="../images/activities/Musica.jpg" alt="Música y movimiento">
+                    <img src="../images/activities/Musica.jpg" width="4000" height="6000" alt="Música y movimiento" loading="lazy" decoding="async">
                     <div><h3>Música y pausa</h3><p>Baila cuando suena la música y practica detenerse cuando hay silencio.</p></div>
                 </article>
                 <article class="activity-card hidden" data-category="motricidad">
-                    <img src="../images/activities/Colores.jpg" alt="Clasificación por colores">
+                    <img src="../images/activities/Colores.jpg" width="5304" height="7952" alt="Clasificación por colores" loading="lazy" decoding="async">
                     <div><h3>Clasificar por colores</h3><p>Ordena bloques, tapas o tarjetas para practicar atención y categorización.</p></div>
                 </article>
             </div>
@@ -77,16 +141,39 @@
         <!-- Recomendaciones: evita sobrecargar a la familia y mejora la experiencia. -->
         <section class="split-section section-band soft">
             <div class="split-text hidden">
-                <h2>Como adaptar una actividad</h2>
+                <h2>Cómo adaptar una actividad</h2>
                 <p>Empieza con pocos materiales, instrucciones breves y un tiempo definido. Si aparece cansancio, baja la dificultad o termina con una acción que ya domine.</p>
+                <p class="note-muted">
+                    Estas actividades son juego y práctica en casa. El "juego sensorial" no debe confundirse con la
+                    terapia de integración sensorial como tratamiento clínico formal, cuya evidencia científica es
+                    todavía limitada y mixta según revisiones especializadas.
+                </p>
             </div>
             <div class="info-panel hidden">
                 <h3>Antes de empezar</h3>
                 <ul class="check-list">
                     <li>Prepara el espacio con pocos distractores.</li>
-                    <li>Anticipa que van a hacer y cuando termina.</li>
+                    <li>Anticipa qué van a hacer y cuándo termina.</li>
                     <li>Ofrece pausas sensoriales si las necesita.</li>
                     <li>Reconoce el esfuerzo, no solo el resultado.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Fuentes: matiza especificamente la evidencia del juego/terapia sensorial. -->
+        <section class="section-wrap">
+            <div class="sources">
+                <h2>Fuentes científicas</h2>
+                <p>Información revisada y redactada por Aprendiendo Juntos TEA a partir de las siguientes fuentes. No sustituye la valoración de un profesional de la salud.</p>
+                <ul>
+                    <li>
+                        <a href="https://www.cochranelibrary.com/" target="_blank" rel="noopener noreferrer">Cochrane Library — Revisiones sobre integración sensorial y auditiva en TEA<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+                        <span class="source-note">Evidencia mixta o insuficiente sobre la integración sensorial como tratamiento clínico formal.</span>
+                    </li>
+                    <li>
+                        <a href="https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd" target="_blank" rel="noopener noreferrer">NIMH — Autism Spectrum Disorder<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+                        <span class="source-note">Panorama general de apoyos con evidencia para el desarrollo infantil.</span>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -95,15 +182,16 @@
     <!-- Pie de pagina: cierre común de la web. -->
     <footer class="site-footer">
         <div class="footer-container">
-            <div><h3>Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA</h3><p>Actividades y recursos para acompañar desde casa.</p></div>
+            <div><h3>Aprendiendo Juntos TEA</h3><p>Actividades y recursos para acompañar desde casa.</p></div>
             <div><h3>Navegación</h3><a href="../index.html">Inicio</a><a href="recursos.html">Recursos</a><a href="padres.html">Para familias</a></div>
             <div><h3>Contacto</h3><p>WhatsApp: +505 5709-1162</p><p>Nicaragua</p></div>
         </div>
-        <p class="copyright">2026 Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA. Todos los derechos reservados.</p>
+        <p class="copyright">2026 Aprendiendo Juntos TEA. Todos los derechos reservados.</p>
     </footer>
 
-    <a class="whatsapp" href="https://wa.me/50557091162" aria-label="Escribir por WhatsApp">WA</a>
-    <button id="topBtn" type="button" aria-label="Volver arriba">Arriba</button>
+    <a class="whatsapp" href="https://wa.me/50557091162" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.1 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg></a>
+    <button id="topBtn" type="button" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg></button>
+    <script src="../js/darkmode.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>

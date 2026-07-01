@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos | Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA</title>
-    <meta name="description" content="Recursos educativos para comunicación, rutinas visuales, emociones, autonomía y habilidades sociales en TEA.">
+    <title>Recursos para TEA | Aprendiendo Juntos TEA</title>
+    <meta name="description" content="Recursos educativos para comunicación, rutinas visuales, emociones, autonomía y habilidades sociales en TEA, organizados por objetivo.">
+    <link rel="canonical" href="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/pages/recursos.html">
+    <meta name="theme-color" content="#f7fbfc" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#10161a" media="(prefers-color-scheme: dark)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aprendiendo Juntos TEA">
+    <meta property="og:locale" content="es_NI">
+    <meta property="og:title" content="Recursos para TEA | Aprendiendo Juntos TEA">
+    <meta property="og:description" content="Recursos educativos para comunicación, rutinas visuales, emociones, autonomía y habilidades sociales en TEA, organizados por objetivo.">
+    <meta property="og:url" content="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/pages/recursos.html">
+    <meta property="og:image" content="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/images/banners/familia-interactuando-nino.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Recursos para TEA | Aprendiendo Juntos TEA">
+    <meta name="twitter:description" content="Recursos educativos para comunicación, rutinas visuales, emociones y autonomía en TEA.">
+    <meta name="twitter:image" content="https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/images/banners/familia-interactuando-nino.png">
+
+    <script>
+        (function () {
+            try {
+                var storedTheme = localStorage.getItem("theme");
+                if (storedTheme) {
+                    document.documentElement.setAttribute("data-theme", storedTheme);
+                }
+            } catch (error) {
+                /* localStorage no disponible: se usara la preferencia del sistema */
+            }
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,68 +40,104 @@
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animation.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/" },
+                    { "@type": "ListItem", "position": 2, "name": "Recursos", "item": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/pages/recursos.html" }
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "name": "Recursos para TEA",
+                "url": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/pages/recursos.html",
+                "description": "Recursos educativos para comunicación, rutinas visuales, emociones, autonomía y habilidades sociales en TEA, organizados por objetivo.",
+                "inLanguage": "es",
+                "isPartOf": { "@id": "https://autismoproyecto25-droid.github.io/AprendiendoJuntosTEA/#website" }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <!-- Encabezado compartido: facilita moverse entre recursos y actividades. -->
     <header class="site-header">
         <nav class="navbar" aria-label="Navegación principal">
             <a class="logo" href="../index.html"><span class="logo-mark">AJ</span><span>Aprendiendo Juntos TEA</span></a>
-            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
-            <ul class="nav-links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tea.html">Que es TEA</a></li>
-                <li><a class="active" href="recursos.html">Recursos</a></li>
-                <li><a href="actividades.html">Actividades</a></li>
-                <li><a href="padres.html">Para familias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links" id="primaryNav">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="tea.html">¿Qué es el TEA?</a></li>
+                    <li><a class="active" href="recursos.html">Recursos</a></li>
+                    <li><a href="actividades.html">Actividades</a></li>
+                    <li><a href="padres.html">Para familias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <button class="theme-toggle" type="button" id="themeToggle" aria-pressed="false" aria-label="Cambiar a modo oscuro">
+                    <span class="theme-toggle-icon" aria-hidden="true"></span>
+                </button>
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span><span></span></button>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
+        <nav class="breadcrumbs" aria-label="Ruta de navegación">
+            <ol>
+                <li><a href="../index.html">Inicio</a></li>
+                <li aria-current="page">Recursos</li>
+            </ol>
+        </nav>
+
         <!-- Hero interno: presenta el catalogo de recursos. -->
         <section class="page-hero">
             <span class="eyebrow">Biblioteca de apoyo</span>
             <h1>Recursos educativos para TEA</h1>
-            <p>Materiales organizados por objetivo para que familias y docentes puedan elegir rápidamente que trabajar.</p>
+            <p>Materiales organizados por objetivo para que familias y docentes puedan elegir rápidamente qué trabajar. Los apoyos visuales y de comunicación tienen buen respaldo científico como herramientas educativas complementarias.</p>
         </section>
 
         <!-- Filtros: permiten mostrar recursos segun la necesidad del momento. -->
         <section class="section-wrap">
             <div class="filter-bar" data-filter-group=".resource-card">
-                <button class="filter-button active" type="button" data-filter="all">Todos</button>
-                <button class="filter-button" type="button" data-filter="comunicación">Comunicación</button>
-                <button class="filter-button" type="button" data-filter="rutinas">Rutinas</button>
-                <button class="filter-button" type="button" data-filter="emociones">Emociones</button>
+                <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+                <button class="filter-button" type="button" data-filter="comunicación" aria-pressed="false">Comunicación</button>
+                <button class="filter-button" type="button" data-filter="rutinas" aria-pressed="false">Rutinas</button>
+                <button class="filter-button" type="button" data-filter="emociones" aria-pressed="false">Emociones</button>
             </div>
             <div class="resources-grid">
                 <article class="resource-card hidden" data-category="comunicación">
-                    <span class="card-icon">PI</span>
-                    <h3>Pictogramas basicos</h3>
+                    <span class="card-icon" aria-hidden="true">PI</span>
+                    <h3>Pictogramas básicos</h3>
                     <p>Tarjetas para pedir ayuda, agua, descanso, baño, comida y objetos de uso diario.</p>
                 </article>
                 <article class="resource-card hidden" data-category="rutinas">
-                    <span class="card-icon">RV</span>
-                    <h3>Rutina de manana</h3>
+                    <span class="card-icon" aria-hidden="true">RV</span>
+                    <h3>Rutina de mañana</h3>
                     <p>Secuencia visual para despertar, asearse, vestirse, desayunar y preparar mochila.</p>
                 </article>
                 <article class="resource-card hidden" data-category="emociones">
-                    <span class="card-icon">EM</span>
+                    <span class="card-icon" aria-hidden="true">EM</span>
                     <h3>Semáforo emocional</h3>
-                    <p>Guía para reconocer calma, alerta y saturación con acciones de regulación.</p>
+                    <p>Guía visual (no clínica) para reconocer calma, alerta y saturación con acciones de regulación.</p>
                 </article>
                 <article class="resource-card hidden" data-category="comunicación">
-                    <span class="card-icon">FR</span>
+                    <span class="card-icon" aria-hidden="true">FR</span>
                     <h3>Frases funcionales</h3>
                     <p>Modelos breves para practicar peticiones, rechazo respetuoso y turnos de conversación.</p>
                 </article>
                 <article class="resource-card hidden" data-category="rutinas">
-                    <span class="card-icon">TR</span>
+                    <span class="card-icon" aria-hidden="true">TR</span>
                     <h3>Tabla de transiciones</h3>
                     <p>Apoyo para anticipar cambios entre juego, comida, escuela, descanso y salida.</p>
                 </article>
                 <article class="resource-card hidden" data-category="emociones">
-                    <span class="card-icon">CA</span>
+                    <span class="card-icon" aria-hidden="true">CA</span>
                     <h3>Kit de calma</h3>
                     <p>Lista de objetos y acciones para crear un espacio de regulación sensorial en casa.</p>
                 </article>
@@ -83,13 +147,31 @@
         <!-- Método de uso: explica como aplicar materiales sin saturar. -->
         <section class="section-wrap soft">
             <div class="section-title">
-                <span class="eyebrow">Como usarlos</span>
+                <span class="eyebrow">Cómo usarlos</span>
                 <h2>Aplicación sencilla en tres pasos</h2>
             </div>
             <div class="steps-grid">
-                <article class="step-card hidden"><span class="card-icon">1</span><h3>Elige una meta</h3><p>Trabaja una habilidad por vez: pedir ayuda, esperar turno o terminar una rutina.</p></article>
-                <article class="step-card hidden"><span class="card-icon">2</span><h3>Usa apoyos visibles</h3><p>Coloca el material donde se necesita: mesa, bano, habitacion o mochila.</p></article>
-                <article class="step-card hidden"><span class="card-icon">3</span><h3>Repite con calma</h3><p>La practica breve y constante suele funcionar mejor que sesiones largas.</p></article>
+                <article class="step-card hidden"><span class="card-icon" aria-hidden="true">1</span><h3>Elige una meta</h3><p>Trabaja una habilidad por vez: pedir ayuda, esperar turno o terminar una rutina.</p></article>
+                <article class="step-card hidden"><span class="card-icon" aria-hidden="true">2</span><h3>Usa apoyos visibles</h3><p>Coloca el material donde se necesita: mesa, baño, habitación o mochila.</p></article>
+                <article class="step-card hidden"><span class="card-icon" aria-hidden="true">3</span><h3>Repite con calma</h3><p>La práctica breve y constante suele funcionar mejor que sesiones largas.</p></article>
+            </div>
+        </section>
+
+        <!-- Fuentes: respalda pictogramas, rutinas visuales y comunicacion aumentativa. -->
+        <section class="section-wrap">
+            <div class="sources">
+                <h2>Fuentes científicas</h2>
+                <p>Información revisada y redactada por Aprendiendo Juntos TEA a partir de las siguientes fuentes. No sustituye la valoración de un profesional de la salud.</p>
+                <ul>
+                    <li>
+                        <a href="https://www.nice.org.uk/guidance/cg170" target="_blank" rel="noopener noreferrer">NICE — Guía clínica CG170, autismo: manejo en niños, niñas y jóvenes<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+                        <span class="source-note">Respaldo de apoyos visuales y de comunicación como parte del plan de apoyo.</span>
+                    </li>
+                    <li>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer">PubMed — Literatura científica revisada por pares sobre comunicación aumentativa y alternativa<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+                        <span class="source-note">Base de datos donde se indexan las revisiones sistemáticas sobre pictogramas y sistemas de comunicación.</span>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
@@ -97,15 +179,16 @@
     <!-- Pie de pagina: mantiene contacto y enlaces clave. -->
     <footer class="site-footer">
         <div class="footer-container">
-            <div><h3>Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA</h3><p>Recursos educativos claros y aplicables.</p></div>
+            <div><h3>Aprendiendo Juntos TEA</h3><p>Recursos educativos claros y aplicables.</p></div>
             <div><h3>Navegación</h3><a href="../index.html">Inicio</a><a href="actividades.html">Actividades</a><a href="contacto.html">Contacto</a></div>
             <div><h3>Contacto</h3><p>WhatsApp: +505 5709-1162</p><p>Correo: contacto@aprendiendojuntostea.com</p></div>
         </div>
-        <p class="copyright">2026 Aprendiendo Juntos sobre Transtorno del Espectro Autista - TEA. Todos los derechos reservados.</p>
+        <p class="copyright">2026 Aprendiendo Juntos TEA. Todos los derechos reservados.</p>
     </footer>
 
-    <a class="whatsapp" href="https://wa.me/50557091162" aria-label="Escribir por WhatsApp">WA</a>
-    <button id="topBtn" type="button" aria-label="Volver arriba">Arriba</button>
+    <a class="whatsapp" href="https://wa.me/50557091162" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.1 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg></a>
+    <button id="topBtn" type="button" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg></button>
+    <script src="../js/darkmode.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>

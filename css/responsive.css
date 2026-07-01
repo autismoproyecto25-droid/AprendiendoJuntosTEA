@@ -1,4 +1,4 @@
-/* Adaptacion para tabletas: reduce columnas y mantiene lectura comoda. */
+/* Adaptacion para tabletas: reduce columnas, mantiene lectura comoda y agrupa el menu movil. */
 @media (max-width: 980px) {
     .menu-toggle {
         display: block;
@@ -7,7 +7,7 @@
     .nav-links {
         background: var(--surface);
         border: 1px solid var(--line);
-        border-radius: var(--radius);
+        border-radius: var(--radius-lg);
         box-shadow: var(--shadow);
         display: none;
         flex-direction: column;
@@ -23,6 +23,7 @@
     }
 
     .nav-links a {
+        border-radius: var(--radius);
         width: 100%;
     }
 
@@ -55,7 +56,14 @@
     }
 
     .logo span:last-child {
-        max-width: 190px;
+        max-width: 46vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .nav-right {
+        gap: 8px;
     }
 
     .section-wrap,
@@ -109,5 +117,18 @@
     #topBtn {
         bottom: 76px;
         right: 16px;
+    }
+}
+
+/* Pantallas muy pequenas: evita que el logo y los iconos de utilidad se apinen. */
+@media (max-width: 380px) {
+    .logo span:last-child {
+        display: none;
+    }
+
+    .theme-toggle,
+    .menu-toggle {
+        height: 40px;
+        width: 40px;
     }
 }

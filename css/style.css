@@ -12,8 +12,9 @@ html {
 body {
     background: var(--background);
     color: var(--text);
-    font-family: "Poppins", Arial, sans-serif;
-    line-height: 1.6;
+    font-family: var(--font-body);
+    line-height: var(--lh-normal);
+    transition: background var(--transition-slow), color var(--transition-slow);
 }
 
 img {
@@ -32,22 +33,69 @@ select {
     font: inherit;
 }
 
-/* Encabezado y navegación: se mantiene fijo para mejorar la maniobrabilidad. */
+/* Foco accesible: visible para navegacion por teclado en cualquier control interactivo. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+}
+
+/* Enlace "saltar al contenido": oculto hasta recibir foco por teclado. */
+.skip-link {
+    background: var(--primary);
+    border-radius: 0 0 var(--radius) 0;
+    color: white;
+    font-weight: 700;
+    left: 0;
+    padding: 14px 20px;
+    position: fixed;
+    top: 0;
+    transform: translateY(-120%);
+    transition: transform var(--transition);
+    z-index: var(--z-skip-link);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+/* Oculta visualmente pero mantiene disponible para lectores de pantalla (etiquetas del formulario). */
+.visually-hidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* Encabezado y navegacion: fijo, con fondo translucido y desenfoque para un aspecto moderno. */
 .site-header {
-    background: rgba(255, 255, 255, 0.94);
+    background: var(--header-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--line);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    transition: background var(--transition-slow), border-color var(--transition-slow);
+    z-index: var(--z-header);
 }
 
 .navbar {
     align-items: center;
     display: flex;
+    gap: 12px;
     justify-content: space-between;
     margin: 0 auto;
     max-width: var(--container);
-    min-height: 76px;
+    min-height: var(--header-height);
     padding: 0 24px;
 }
 
@@ -58,6 +106,13 @@ select {
     font-weight: 700;
     gap: 12px;
     text-decoration: none;
+}
+
+.logo span:last-child {
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .logo-mark {
@@ -71,20 +126,27 @@ select {
     width: 40px;
 }
 
+.nav-right {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
 .nav-links {
     align-items: center;
     display: flex;
-    gap: 6px;
+    gap: 4px;
     list-style: none;
 }
 
 .nav-links a {
-    border-radius: var(--radius);
+    border-radius: var(--radius-full);
     color: var(--text);
     display: inline-flex;
     font-size: 0.95rem;
     font-weight: 600;
-    padding: 10px 14px;
+    padding: 10px 16px;
+    position: relative;
     text-decoration: none;
     transition: background var(--transition), color var(--transition);
 }
@@ -92,7 +154,53 @@ select {
 .nav-links a:hover,
 .nav-links a.active {
     background: var(--soft);
-    color: var(--primary-dark);
+    color: var(--accent-text);
+}
+
+/* Boton de modo oscuro: icono dibujado en CSS puro (sin texto), estado accesible via aria-pressed. */
+.theme-toggle {
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    display: inline-flex;
+    height: 44px;
+    justify-content: center;
+    transition: background var(--transition), border-color var(--transition), transform var(--transition-fast);
+    width: 44px;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+}
+
+.theme-toggle-icon,
+.theme-toggle-icon::before {
+    border-radius: 50%;
+    display: block;
+    height: 16px;
+    width: 16px;
+}
+
+.theme-toggle-icon {
+    background: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent) inset;
+    position: relative;
+    transition: background var(--transition), box-shadow var(--transition), transform var(--transition-slow);
+}
+
+[data-theme="dark"] .theme-toggle-icon {
+    background: transparent;
+    box-shadow: 0 0 0 2px var(--ink) inset;
+    transform: rotate(35deg);
+}
+
+[data-theme="dark"] .theme-toggle-icon::before {
+    background: var(--surface);
+    box-shadow: 3px -3px 0 0 var(--ink);
+    content: "";
+    position: absolute;
 }
 
 .menu-toggle {
@@ -108,9 +216,11 @@ select {
 
 .menu-toggle span {
     background: var(--ink);
+    border-radius: var(--radius-full);
     display: block;
     height: 2px;
     margin: 5px 0;
+    transition: transform var(--transition), opacity var(--transition);
     width: 100%;
 }
 
@@ -134,6 +244,7 @@ select {
     max-width: none;
     padding-left: max(24px, calc((100vw - var(--container)) / 2 + 24px));
     padding-right: max(24px, calc((100vw - var(--container)) / 2 + 24px));
+    transition: background var(--transition-slow);
 }
 
 .section-title {
@@ -147,17 +258,17 @@ select {
 .cta h2,
 .page-hero h1 {
     color: var(--ink);
-    font-size: clamp(2rem, 4vw, 3.25rem);
-    line-height: 1.12;
+    font-size: var(--fs-section);
+    line-height: var(--lh-tight);
     margin-bottom: 16px;
 }
 
 .eyebrow {
-    color: var(--primary-dark);
+    color: var(--accent-text);
     display: inline-block;
-    font-size: 0.78rem;
+    font-size: var(--fs-xs);
     font-weight: 700;
-    letter-spacing: 0;
+    letter-spacing: 0.03em;
     margin-bottom: 14px;
     text-transform: uppercase;
 }
@@ -166,44 +277,62 @@ select {
 .btn-secondary,
 .text-link {
     align-items: center;
-    border-radius: var(--radius);
+    border-radius: var(--radius-full);
     display: inline-flex;
     font-weight: 700;
     justify-content: center;
     min-height: 48px;
-    padding: 12px 18px;
+    padding: 12px 22px;
     text-decoration: none;
-    transition: transform var(--transition), background var(--transition);
+    transition: transform var(--transition-fast), box-shadow var(--transition), background var(--transition);
 }
 
 .btn-primary {
     background: var(--primary);
+    box-shadow: var(--shadow-sm);
     color: white;
 }
 
 .btn-secondary {
     background: var(--secondary);
-    color: var(--ink);
+    color: var(--on-accent);
 }
 
 .btn-primary:hover,
 .btn-secondary:hover {
-    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-3px);
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+    transform: translateY(-1px);
 }
 
 .text-link {
-    color: var(--primary-dark);
+    border-radius: var(--radius-sm);
+    color: var(--accent-text);
     padding-left: 0;
+}
+
+.text-link::after {
+    content: "\2192";
+    margin-left: 8px;
+    transition: transform var(--transition);
+}
+
+.text-link:hover::after {
+    transform: translateX(4px);
 }
 
 /* Hero: primer impacto visual con imagen real del proyecto. */
 .hero {
-    min-height: calc(100vh - 76px);
+    min-height: calc(100vh - var(--header-height));
 }
 
 .hero-content h1 {
     color: var(--ink);
-    font-size: clamp(2.35rem, 5vw, 4.5rem);
+    font-size: var(--fs-hero);
     line-height: 1.05;
     margin-bottom: 22px;
 }
@@ -212,7 +341,7 @@ select {
 .split-text p,
 .page-hero p {
     color: var(--text);
-    font-size: 1.05rem;
+    font-size: var(--fs-md);
     margin-bottom: 28px;
 }
 
@@ -228,13 +357,13 @@ select {
 
 .hero-image img {
     aspect-ratio: 4 / 3;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
     object-fit: cover;
     width: 100%;
 }
 
-/* Tarjetas y rejillas: organizan recursos de forma escaneable. */
+/* Tarjetas y rejillas: organizan recursos de forma escaneable, con elevacion suave al interactuar. */
 .feature-grid,
 .resources-grid,
 .activities-grid,
@@ -255,9 +384,13 @@ select {
 .info-panel {
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
+    min-width: 0;
+    overflow-wrap: break-word;
     padding: 28px;
+    transition: background var(--transition-slow), border-color var(--transition-slow),
+        box-shadow var(--transition), transform var(--transition);
 }
 
 .feature-card,
@@ -268,23 +401,36 @@ select {
 
 .feature-card:hover,
 .resource-card:hover,
-.activity-card:hover {
-    transform: translateY(-4px);
-    transition: transform var(--transition);
+.activity-card:hover,
+.guide-card:hover,
+.contact-card:hover,
+.step-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-6px);
 }
 
 .card-icon {
     align-items: center;
     background: var(--soft);
     border-radius: var(--radius);
-    color: var(--primary-dark);
+    color: var(--accent-text);
     display: inline-flex;
-    font-size: 0.85rem;
+    font-size: var(--fs-xs);
     font-weight: 800;
     height: 44px;
     justify-content: center;
     margin-bottom: 18px;
+    transition: background var(--transition), transform var(--transition);
     width: 44px;
+}
+
+.feature-card:hover .card-icon,
+.resource-card:hover .card-icon,
+.guide-card:hover .card-icon,
+.contact-card:hover .card-icon,
+.step-card:hover .card-icon {
+    transform: scale(1.08);
 }
 
 .feature-card h3,
@@ -307,7 +453,12 @@ select {
     aspect-ratio: 16 / 10;
     height: auto;
     object-fit: cover;
+    transition: transform var(--transition-slow);
     width: 100%;
+}
+
+.activity-card:hover img {
+    transform: scale(1.05);
 }
 
 .activity-card div {
@@ -317,6 +468,21 @@ select {
 .center-action {
     margin-top: 34px;
     text-align: center;
+}
+
+/* Utilidades de seccion: evitan estilos en linea para casos puntuales de maquetado. */
+.section-wrap.no-pad-bottom {
+    padding-bottom: 0;
+}
+
+.section-band.flush {
+    padding: 0;
+}
+
+.note-muted {
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    margin-top: 16px;
 }
 
 /* Secciones informativas: listas, paneles y pasos de orientacion. */
@@ -333,6 +499,7 @@ select {
 .plain-list li {
     border-bottom: 1px solid var(--line);
     padding: 12px 0;
+    transition: border-color var(--transition-slow);
 }
 
 .check-list li::before {
@@ -342,12 +509,58 @@ select {
     margin-right: 10px;
 }
 
+/* Migas de pan: orientan al usuario y aportan BreadcrumbList a los buscadores (ver JSON-LD en cada pagina). */
+.breadcrumbs {
+    margin: 0 auto;
+    max-width: var(--container);
+    padding: 18px 24px 0;
+}
+
+.breadcrumbs ol {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+}
+
+.breadcrumbs li {
+    align-items: center;
+    color: var(--muted);
+    display: flex;
+    font-size: var(--fs-sm);
+    gap: 6px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: "\2192";
+    color: var(--muted);
+}
+
+.breadcrumbs a {
+    border-radius: var(--radius-sm);
+    color: var(--muted);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent-text);
+    text-decoration: underline;
+}
+
+.breadcrumbs li[aria-current="page"] {
+    color: var(--text);
+    font-weight: 600;
+}
+
 .page-hero {
     background: var(--soft);
     margin: 0 auto;
     max-width: none;
     padding: 86px 24px;
     text-align: center;
+    transition: background var(--transition-slow);
 }
 
 .page-hero p {
@@ -367,21 +580,23 @@ select {
 .filter-button {
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: var(--radius);
+    border-radius: var(--radius-full);
     color: var(--text);
     cursor: pointer;
     font-weight: 700;
     min-height: 42px;
-    padding: 10px 14px;
+    padding: 10px 18px;
+    transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
 .filter-button.active,
 .filter-button:hover {
     background: var(--primary);
+    border-color: var(--primary);
     color: white;
 }
 
-/* FAQ: respuestas colapsables para mantener la pagina limpia. */
+/* FAQ: acordeon animado con la tecnica de grid-template-rows (sin cambiar el HTML/JS existente). */
 .faq-container {
     display: grid;
     gap: 16px;
@@ -392,9 +607,14 @@ select {
 .faq-item {
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
     overflow: hidden;
+    transition: background var(--transition-slow), border-color var(--transition-slow), box-shadow var(--transition);
+}
+
+.faq-item.open {
+    box-shadow: var(--shadow);
 }
 
 .faq-question {
@@ -409,34 +629,51 @@ select {
 }
 
 .faq-answer {
-    display: none;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--transition-slow);
+}
+
+.faq-answer p {
+    min-height: 0;
+    overflow: hidden;
     padding: 0 22px 22px;
 }
 
 .faq-item.open .faq-answer {
-    display: block;
+    grid-template-rows: 1fr;
 }
 
-/* Formularios y contacto: entradas amplias y legibles. */
+/* Formularios y contacto: entradas amplias, legibles y con fondo propio (necesario en modo oscuro). */
 .contact-form {
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
     display: grid;
     gap: 18px;
     margin: 0 auto;
     max-width: 780px;
     padding: 30px;
+    transition: background var(--transition-slow), border-color var(--transition-slow);
 }
 
 .contact-form input,
-.contact-form textarea,
-.newsletter-form input {
+.contact-form textarea {
+    background: var(--background);
     border: 1px solid var(--line);
     border-radius: var(--radius);
+    color: var(--ink);
     padding: 14px 16px;
+    transition: background var(--transition-slow), border-color var(--transition), box-shadow var(--transition);
     width: 100%;
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 25%, transparent);
+    outline: none;
 }
 
 .contact-form textarea {
@@ -444,7 +681,126 @@ select {
     resize: vertical;
 }
 
-/* CTA y pie de pagina: cierre con accion clara y navegación secundaria. */
+/* Dato destacado: resume una cifra clave con su fuente, siempre visible junto al numero. */
+.stat-banner {
+    align-items: center;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 0 auto 54px;
+    max-width: var(--container);
+    padding: 28px 32px;
+    transition: background var(--transition-slow), border-color var(--transition-slow);
+}
+
+.stat-banner strong {
+    color: var(--primary);
+    flex-shrink: 0;
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    line-height: 1;
+}
+
+.stat-banner p {
+    color: var(--text);
+    margin: 0;
+}
+
+.stat-banner cite {
+    color: var(--muted);
+    display: block;
+    font-size: var(--fs-sm);
+    font-style: normal;
+    margin-top: 6px;
+}
+
+/* Lista de fuentes cientificas: cierre de cada articulo con las referencias citadas. */
+.sources {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    margin: 0 auto;
+    max-width: 860px;
+    padding: 30px;
+    transition: background var(--transition-slow), border-color var(--transition-slow);
+}
+
+.sources h2 {
+    color: var(--ink);
+    margin-bottom: 6px;
+}
+
+.sources > p {
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    margin-bottom: 20px;
+}
+
+.sources ul {
+    display: grid;
+    gap: 14px;
+    list-style: none;
+}
+
+.sources li {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 14px;
+}
+
+.sources li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.sources a {
+    align-items: center;
+    color: var(--accent-text);
+    display: inline-flex;
+    font-weight: 600;
+    gap: 6px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.sources .source-note {
+    color: var(--muted);
+    display: block;
+    font-size: var(--fs-sm);
+    margin-top: 2px;
+}
+
+.icon-external {
+    flex-shrink: 0;
+    height: 14px;
+    width: 14px;
+}
+
+/* Alerta de derivacion profesional: se usa en contenido sensible (crisis, señales). */
+.help-notice {
+    background: color-mix(in srgb, var(--accent) 14%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+    border-radius: var(--radius-lg);
+    padding: 22px 26px;
+}
+
+.help-notice h3 {
+    align-items: center;
+    color: var(--ink);
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.help-notice svg {
+    color: var(--accent);
+    flex-shrink: 0;
+    height: 22px;
+    width: 22px;
+}
+
+/* CTA y pie de pagina: cierre con accion clara y navegacion secundaria. */
 .cta {
     background: var(--primary-dark);
     color: white;
@@ -465,8 +821,8 @@ select {
 }
 
 .site-footer {
-    background: var(--ink);
-    color: #dce8eb;
+    background: var(--surface-inverse);
+    color: var(--text-on-inverse);
     padding: 54px 24px 28px;
 }
 
@@ -478,20 +834,36 @@ select {
     max-width: var(--container);
 }
 
+.footer-container > div {
+    min-width: 0;
+}
+
+.site-footer p,
+.site-footer a {
+    overflow-wrap: break-word;
+}
+
 .site-footer h3 {
     color: white;
     margin-bottom: 14px;
 }
 
 .site-footer a {
-    color: #dce8eb;
+    color: var(--text-on-inverse);
     display: block;
     margin: 8px 0;
     text-decoration: none;
+    transition: color var(--transition);
+    width: fit-content;
+}
+
+.site-footer a:hover {
+    color: white;
 }
 
 .copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.16);
+    color: var(--text-on-inverse);
     margin: 36px auto 0;
     max-width: var(--container);
     padding-top: 20px;
@@ -501,59 +873,81 @@ select {
 .whatsapp,
 #topBtn {
     border: 0;
-    border-radius: var(--radius);
+    border-radius: var(--radius-full);
     box-shadow: var(--shadow);
-    font-size: 0.78rem;
+    font-size: var(--fs-xs);
     font-weight: 800;
     position: fixed;
-    z-index: 900;
+    transition: transform var(--transition-fast), box-shadow var(--transition);
+    z-index: var(--z-fab);
+}
+
+.whatsapp:hover,
+#topBtn:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+}
+
+.whatsapp,
+#topBtn {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.whatsapp svg,
+#topBtn svg {
+    height: 24px;
+    pointer-events: none;
+    width: 24px;
 }
 
 .whatsapp {
-    align-items: center;
-    background: #25d366;
+    background: var(--whatsapp-bg);
     bottom: 22px;
     color: white;
-    display: inline-flex;
     height: 52px;
-    justify-content: center;
     right: 22px;
     text-decoration: none;
     width: 52px;
 }
 
 #topBtn {
-    background: var(--ink);
-    bottom: 84px;
+    background: var(--surface-inverse);
+    bottom: 86px;
     color: white;
     cursor: pointer;
     display: none;
-    min-height: 42px;
-    padding: 10px 12px;
+    height: 46px;
     right: 22px;
+    width: 46px;
 }
 
-/* Animaciones suaves: se activan al entrar en pantalla. */
-.hidden {
-    opacity: 0;
-    transform: translateY(24px);
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.65s ease, transform 0.65s ease;
-}
-
+/* Animaciones de entrada (definidas en css/animation.css) y su respeto por accesibilidad. */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
     }
 
-    .hidden,
-    .show {
-        opacity: 1;
-        transform: none;
-        transition: none;
+    body,
+    .site-header,
+    .soft,
+    .page-hero,
+    .contact-form,
+    .feature-card,
+    .resource-card,
+    .activity-card,
+    .contact-card,
+    .guide-card,
+    .step-card,
+    .info-panel,
+    .faq-item,
+    .faq-answer,
+    .theme-toggle-icon,
+    .btn-primary,
+    .btn-secondary,
+    .whatsapp,
+    #topBtn {
+        transition: none !important;
     }
 }
